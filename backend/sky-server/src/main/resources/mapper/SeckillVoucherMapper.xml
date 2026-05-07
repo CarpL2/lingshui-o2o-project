@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sky.mapper.SeckillVoucherMapper">
+
+    <update id="update">
+        update seckill_voucher
+        <set>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="useTime != null">
+                use_time = #{useTime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <insert id="insert" parameterType="com.sky.entity.SeckillVoucher" useGeneratedKeys="true" keyProperty="id">
+        insert into seckill_voucher
+            (user_id, seckill_dish_id, voucher_code, status, order_time, use_time)
+        values
+            (#{userId}, #{seckillDishId}, #{voucherCode}, #{status}, #{orderTime}, #{useTime})
+    </insert>
+
+</mapper>

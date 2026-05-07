@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sky.mapper.SeckillMapper">
+
+    <insert id="addSeckill" useGeneratedKeys="true" keyProperty="id">
+        insert into seckill_dish (dish_id, seckill_price, stock_count, status, start_time, end_time, create_time, update_time)
+        values (#{dishId}, #{seckillPrice}, #{stockCount}, #{status}, #{startTime}, #{endTime}, #{createTime}, #{updateTime})
+    </insert>
+</mapper>

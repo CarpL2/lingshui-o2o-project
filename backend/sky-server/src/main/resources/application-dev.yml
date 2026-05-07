@@ -1,0 +1,35 @@
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: sky_take_out
+    username: root
+    password: 
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: 
+    access-key-secret: 
+    bucket-name: take---out
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 10
+  wechat:
+    appid: 
+    secret: 
+  shop:
+    address: 
+  baidu:
+    ak: 
+spring:
+  rabbitmq:
+    host: localhost   # 如果在服务器上就填服务器IP
+    port: 5672        # 通信端口 (注意不是管理后台的15672)
+    username: guest   # 默认账号 (如果是云服务器，记得去后台新建个账号)
+    password: guest   # 默认密码
+    # 开启手动确认模式 (这句很重要，为了防止消息丢失)
+    listener:
+      simple:
+        acknowledge-mode: manual

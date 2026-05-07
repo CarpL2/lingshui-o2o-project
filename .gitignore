@@ -1,0 +1,27 @@
+# Java & IntelliJ IDEA
+target/
+*.class
+*.jar
+*.war
+.idea/
+*.iml
+.mvn/
+mvnw
+mvnw.cmd
+
+# 前端通用 (Vue & UniApp)
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# UniApp / HBuilderX 特有
+unpackage/
+.hbuilderx/
+
+# 系统垃圾文件
+.DS_Store
+Thumbs.db
